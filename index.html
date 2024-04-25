@@ -1,1 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Food Gallery</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: lightgray;
+        }
+        #wrapper{
+            background-color: #f7f1e3;
+            color: #02398b;
+            display: grid;
+            grid-template: 
+                "h "
+                "n "
+                "m "
+                "f ";
+        }
+        header{
+            grid-area: h;
+        }
+        nav{
+            grid-area: n;
+        }
+        main{
+            grid-area: m;
+        }
+        aside{
+            grid-area: a;
+        }
+        footer{
+            grid-area: f;
+        }
+        header{      
+            background-color: lightsalmon;
+            background-size: auto 100%;
+            padding: 0.5em 0 0.5em 5.5em;
+        }
+        main {
+            background-color: #ffffff;
+            color: #000000;
+            padding: 1em;
+        }
+        aside{
+            display: none;
+        }
+        footer {
+            background-color: antiquewhite;
+            font-size: 70%;
+            text-align: center;
+            padding: 0.5em 0;
+        }
+        img {
+            padding: 0.5em;
+        }
+        aside img{
+            max-width: 80%;
+            height: auto;
+            padding: 0em;
+        }
+        nav{
+            font-size: 120%;
+        }
+        nav ul{
+            padding-left: 0;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        nav ul{
+            list-style-type: none;
+        }
+        nav li{
+            width: 20%;
+            min-width: 6em;
+            font-size: 110%;
+            text-align: center;
+            background-color: #003c58;
+            color:#ffffff;
+            margin: 0.5em;
+            padding: 0.5em;
+        }
+        nav a {
+            text-decoration: none;
+        }
+        h2 {
+            color: #2c2c54;
+        }
+        header,
+        nav,
+        main,
+        footer {
+            display: block;
+        }
+        #gallery{
+            display: flex;
+            flex-flow: row;
+            flex-wrap: wrap;
+            justify-content: left;
+            align-content: space-between;
+        }
 
+        @media (min-width: 600px) {
+            #wrapper {
+                grid-template:
+                " h   h "
+                " n   n "
+                " m   a "
+                " f   f "
+                / 75% 25%;
+            }
+
+            aside{
+                display: block;
+            }
+        }
+        @media (min-width: 1200px) {
+            nav ul {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+            }
+            nav li {
+                min-width: 5em;
+            }
+            #wrapper {
+                grid-template:
+                " h   h   h"
+                " n   m   a"
+                " f   f   f"
+                / 130px 1fr 15%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>Homemade Food Gallery</h1>
+        </header>
+        <nav>
+            <ul>
+                <li>Gallery</li>
+                <li>link a</li>
+                <li>link b</li>
+                <li>link c</li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Homemade Food</h2>
+            <div id="gallery">
+                <img src="image/Cinnamon_Buns.PNG" alt="Cinnamon Buns" width="220" height="220">
+                <img src="image/TaiwaneseMacaron.PNG" alt="Cinnamon Buns" width="220" height="220">
+                <img src="image/chocolatecake.png" alt="Chocolate Cake" width="220" height="220">
+                <img src="image/Chocolate_Roll_Cakes.PNG" alt="Chocolate Roll Cake" width="220" height="220">
+                <img src="image/AmericanCheeseCake.PNG" alt="Cinnamon Buns" width="220" height="220">
+                <img src="image/JapaneseCheesecake.PNG" alt="Cinnamon Buns" width="220" height="220">
+                <img src="image/AppleTart.PNG" alt="Cinnamon Buns" width="220" height="220">
+                <img src="image/HoneyCake.PNG" alt="Cinnamon Buns" width="220" height="220">
+                <img src="image/StrawberryMochi.PNG" alt="Cinnamon Buns" width="220" height="220">
+            </div>
+        </main>
+        <aside>
+            <img src="image/myself.png" alt="Myself">
+            <h2>Yi-Jung</h2>
+            <p>
+                A Taiwanese lady who loves baking and cooking and love to make the taste of home food to share with friends and family in Ireland.
+            </p>
+          </aside>
+        <footer>
+            Copyright © 2024 Yi-Jung
+        </footer>
+    </div>
+</body>
+</html>
