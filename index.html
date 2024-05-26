@@ -1,189 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Food Gallery</title>
+    <title>Just Baking</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-        }
-        body{
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: lightgray;
-        }
-        header{
-            grid-area: h;
-        }
-        nav{
-            grid-area: n;
-        }
-        main{
-            grid-area: m;
-        }
-        aside{
-            grid-area: a;
-        }
-        footer{
-            grid-area: f;
-        }
-        header{      
-            background-color: lightcyan;
-            background-size: auto 100%;
-            padding: 0.5em 0 0.5em 0.5em;
-        }
-        main {
-            background-color: #ffffff;
-            color: #000000;
-            padding: 0.5em;
-        }
-        aside{
-            display: none;
-        }
-        footer {
-            background-color: antiquewhite;
-            font-size: 70%;
-            text-align: center;
-            padding: 0.5em 0;
-        }
-        img {
-            padding: 0.5em;
-        }
-        aside img{
-            max-width: 80%;
-            height: auto;
-            padding: 0em;
-        }
-        nav{
-            font-size: 120%;
-            position:sticky;
-            top: 0;
-            background-color:orchid;
-        }
-        nav ul{
-            padding-left: 0;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-        }
-        nav ul{
-            list-style-type: none;
-        }
-        nav li{
-            width: 45%;
-            min-width: 8em;
-            font-size: 110%;
-            text-align: center;
-            background-color: #003c58;
-            color:#ffffff;
-            margin: 0.1em;
-            padding: 0.1em;
-        }
-        nav a {
-            text-decoration: none;
-        }
-        #wrapper{
-            background-color: #f7f1e3;
-            color: #02398b;
-            display: grid;
-            grid-template: 
-                "h "
-                "n "
-                "m "
-                "f ";
-        }        
-        h2 {
-            color: #2c2c54;
-        }
-        header,
-        nav,
-        main,
-        footer {
-            display: block;
-        }
-        #gallery{
-            display: flex;
-            flex-flow: row;
-            flex-wrap: wrap;
-            justify-content: left;
-            align-content: space-between;
-        }
-
-        @media (min-width: 734px) {
-            #wrapper {
-                grid-template:
-                " h   h "
-                " n   n "
-                " m   a "
-                " f   f "
-                / 75% 25%;
-            }
-
-            aside{
-                display: block;
-            }
-        }
-        @media (min-width: 1200px) {
-            nav ul {
-                display: flex;
-                flex-direction: column;
-                flex-wrap: nowrap;
-            }
-            nav li {
-                min-width: 5em;
-            }
-            #wrapper {
-                margin-left: auto;
-                margin-right: auto;
-                width: 90%;
-                grid-template:
-                " h   h   h"
-                " n   m   a"
-                " f   f   f"
-                / 130px 1fr 15%;
-            }
-        }
-
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
     <div id="wrapper">
-        <header>
-            <h1>Homemade Food</h1>
+        <header class="global-header">
+            <h1>Just Baking</h1>
         </header>
         <nav>
             <ul>
-                <li>Gallery</li>
-                <li>link a</li>
-                <li>link b</li>
-                <li>link c</li>
+                <li><a href="index.html">Cakes &amp; Sweets</a></li>
+                <li>Nutrition Facts</li>
+                <li>Baking Trays</li>
+                <li>Baking Formula</li>
             </ul>
         </nav>
         <main>
-            <h2>Gallery</h2>
+            <h2>Cakes &amp; Sweets</h2>
             <div id="gallery">
-                <img src="image/thumbnail/Cinnamon_Buns.jpg" alt="Cinnamon Buns" width="180" height="180">
-                <img src="image/thumbnail/TaiwaneseMacaron.jpg" alt="Taiwanese Macaron" width="180" height="180">
-                <img src="image/thumbnail/ChocolateCake.jpg" alt="Chocolate Cake" width="180" height="180">
-                <img src="image/thumbnail/Chocolate_Roll_Cakes.jpg" alt="Chocolate Roll Cake" width="180" height="180">
-                <img src="image/thumbnail/AmericanCheeseCake.jpg" alt="American Style Cheese Cake" width="180" height="180">
-                <img src="image/thumbnail/JapaneseCheesecake.jpg" alt="Japanese Cheesecake Buns" width="180" height="180">
-                <img src="image/thumbnail/AppleTart.jpg" alt="Apple Tart" width="180" height="180">
-                <img src="image/thumbnail/HoneyCake.jpg" alt="Honey Cake" width="180" height="180">
-                <img src="image/thumbnail/StrawberryMochi.jpg" alt="Strawberry Mochi" width="180" height="180">
+                <img src="image/thumbnail/Cinnamon_Buns.jpg" alt="Cinnamon Buns">
+                <img src="image/thumbnail/TaiwaneseMacaron.jpg" alt="Taiwanese Macaron">
+                <img src="image/thumbnail/ChocolateCake.jpg" alt="Chocolate Cake">
+                <img src="image/thumbnail/Chocolate_Roll_Cakes.jpg" alt="Chocolate Roll Cake">
+                <img src="image/thumbnail/AmericanCheeseCake.jpg" alt="American Style Cheese Cake">
+                <img src="image/thumbnail/JapaneseCheesecake.jpg" alt="Japanese Cheesecake Buns">
+                <img src="image/thumbnail/AppleTart.jpg" alt="Apple Tart">
+                <img src="image/thumbnail/HoneyCake.jpg" alt="Honey Cake">
+                <img src="image/thumbnail/StrawberryMochi.jpg" alt="Strawberry Mochi">
             </div>
         </main>
         <aside>
             <img src="image/myself.png" alt="Myself">
-            <h2>Yi-Jung</h2>
+            <h2>Me</h2>
             <p>
                 A Taiwanese lady who loves baking and cooking and love to make the taste of home food to share with friends and family in Ireland.
             </p>
           </aside>
         <footer>
-            Copyright © 2024 Yi-Jung
+            <p>Copyright©Baker Yi-Jung. Please <a href="mailto:emilyichan3@gmail.com">Contact Me</a> for further queries.</p>
         </footer>
     </div>
 </body>

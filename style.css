@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    background-color: #ebebeb;
+}
+header{
+    grid-area: h;
+}
+nav{
+    grid-area: n;
+}
+main{
+    grid-area: m;
+}
+aside{
+    grid-area: a;
+}
+footer{
+    grid-area: f;
+}
+header{      
+    color: #0d426d;
+    background-image: url(./image/smile.jpg);
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+    background-size: auto 100%;
+    padding: 0.5em 0 0.5em 5em;
+}
+main, aside {
+    color: #111111;
+    padding: 0.5em 0.5em 1em 0.5em;
+}
+
+aside{
+    display: none;
+}
+footer {
+    background-color: #e69d8b;
+    color: #0d426d;
+    font-size: 70%;
+    text-align: center;
+    padding: 0.5em 0;
+}
+img {
+    padding: 0.5em;
+}
+aside img{
+    max-width: 80%;
+    height: auto;
+    padding: 0em;
+}
+nav ul {
+    background-color: #051e4b;
+    list-style-type: none;
+    padding-left: 0;
+    border-top: 1px solid #eeeeee;
+}
+nav li {
+    border-bottom: 1px solid #eeeeee;
+    text-align: center;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    transition-duration: 100ms;
+}
+nav a:hover {
+    font-weight: bold;
+    text-decoration:underline;
+}
+#wrapper{
+    min-width: 344px;
+    color: #ffffff;    
+    display: grid;
+    grid-template: 
+        "h "
+        "n "
+        "m "
+        "f ";
+}        
+h2 {
+    color: #696969;
+}
+header,
+nav,
+main,
+footer {
+    display: block;
+}
+#gallery{
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-content: space-between;
+}
+#gallery img {
+    width: 200px;
+    height: 200px;
+}
+.global-header {
+    position: sticky;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+@media (min-width: 819px) {
+    #wrapper {
+        grid-template:
+        " h   h "
+        " n   n "
+        " m   a "
+        " f   f "
+        / 75% 25%;
+    }
+
+    aside{
+        display: block;
+    }
+}
+@media (min-width: 1024px) {
+    nav ul {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+    }
+    nav li {
+        min-width: 5em;
+        border-bottom: 1px solid #eeeeee;
+    }   
+    #wrapper {
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        grid-template:
+        " h   h   h"
+        " n   m   a"
+        " f   f   f"
+        / 130px 1fr 15%;
+    }
+}
