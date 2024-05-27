@@ -55,7 +55,7 @@ aside img{
     padding: 0em;
 }
 nav ul {
-    background-color: #051e4b;
+    background-color: #054b4b;
     list-style-type: none;
     padding-left: 0;
     border-top: 1px solid #eeeeee;
@@ -94,7 +94,7 @@ main,
 footer {
     display: block;
 }
-#gallery{
+/* #gallery{
     display: flex;
     flex-flow: row;
     flex-wrap: wrap;
@@ -104,6 +104,43 @@ footer {
 #gallery img {
     width: 200px;
     height: 200px;
+} */
+.ProductList {
+    margin: 0 -10px;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    align-content: center;
+}
+.ProductList .item{
+    width: 100%;
+    padding: 0 10px;
+    margin: 10px 0;
+    text-align: center;
+}
+.ProductList dt {
+    padding: 0 20px;
+    margin-bottom: 5px;
+    background-color: #e2d8dc;
+    color:#052e41;
+    line-height: 36px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+}
+.ProductList img {
+    width: 100%;
+    height: 100%;
+}
+.ProductList dl {
+    height: 100%;
+    padding-bottom: 10px;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
+}
+.fullfit {
+    width: 100%;
+    height: 100%;
 }
 .global-header {
     position: sticky;
@@ -111,21 +148,31 @@ footer {
     left: 0;
     top: 0;
 }
-@media (min-width: 819px) {
+@media (min-width: 768px) {
     #wrapper {
         grid-template:
         " h   h "
         " n   n "
-        " m   a "
+        " m   m "
         " f   f "
         / 75% 25%;
     }
 
     aside{
-        display: block;
+        display: none;
+    }
+    .ProductList .item{
+        width: 50%;
+    }
+    .ProductList img {
+        width: 350px;
+        height: 350px;
     }
 }
 @media (min-width: 1024px) {
+    .global-header {
+        position: relative;
+    }
     nav ul {
         display: flex;
         flex-flow: column nowrap;
@@ -140,9 +187,26 @@ footer {
         margin-right: auto;
         width: 90%;
         grid-template:
-        " h   h   h"
-        " n   m   a"
-        " f   f   f"
-        / 130px 1fr 15%;
+        " h   h "
+        " n   m "
+        " f   f "
+        / 20% 80%;
+    }
+    .ProductList .item{
+        width: 33%;
+    }
+    .ProductList img {
+        width: 250px;
+        height: 250px;
+    }
+    nav {
+        margin: 0 10px 0 0;
+        top: 0;
+        height: 40px;
+        position: sticky;
+        
+    }
+    aside{
+        display: none;
     }
 }
