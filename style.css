@@ -153,9 +153,9 @@ td {
     text-align: left;
 }
 .multitables img {
-    width: 90%;
-    height: 90%;
-    margin: 0 5%;
+    width: 100%;
+    /* height: 100%; */
+    display: block;
 }
 @media (min-width: 768px) {
     #wrapper {
